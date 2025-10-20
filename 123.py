@@ -311,25 +311,193 @@
 
 
 
-
-#全局变量与局部变量
-
-# global关键字，在函数内声明变量为全局变量
-num = 200
-
-def test_a():
-    print(f"test_a: {num}")
-
-def test_b():
-    global num  # 设置内部定义的变量为全局变量
-    num = 500
-    print(f"test_b: {num}")
-
-test_a()
-test_b()
-print(num)
+#
+# #全局变量与局部变量
+#
+# # global关键字，在函数内声明变量为全局变量
+# num = 200
+#
+# def test_a():
+#     print(f"test_a: {num}")
+#
+# def test_b():
+#     global num  # 设置内部定义的变量为全局变量
+#     num = 500
+#     print(f"test_b: {num}")
+#
+# test_a()
+# test_b()
+# print(num)
 
 #61
+
+#银行存款取款案例
+
+# 定义全局变量money name
+# money = 5000000
+# name = None
+# # 要求客户输入姓名
+# name = input("请输入您的姓名：")
+# # 定义查询函数
+# def query(show_header):
+#     if show_header:
+#         print("-------------查询余额-------------")
+#     print(f"{name}，您好，您的余额剩余：{money}元")
+#
+# # 定义存款函数
+# def saving(num):
+#     global money    # money在函数内部定义为全局变量
+#     money += num
+#     print("-------------存款-------------")
+#     print(f"{name}，您好，您存款{num}元成功。")
+#
+#     # 调用query函数查询余额
+#     query(False)
+# # 定义取款函数
+# def get_money(num):
+#     global money
+#     money -= num
+#     print("-------------取款-------------")
+#     print(f"{name}，您好，您取款{num}元成功。")
+#
+#     # 调用query函数查询余额
+#     query(False)
+#
+# # 定义主菜单函数
+# def main():
+#     print("-------------主菜单-------------")
+#     print(f"{name}，您好，欢迎来到黑马银行ATM。请选择操作：")
+#     print("查询余额\t\t[输入1]")
+#     print("存款\t\t[输入2]")
+#     print("取款\t\t[输入3]")
+#     print("退出\t\t[输入4]")
+#     return input("请输入你的选择：")
+#
+#
+# # 设置无限循环，确保程序不退出
+# while True:
+#     keyboard_input = main()
+#     if keyboard_input == "1":
+#         query(True)
+#         continue    # 通过continue继续下一次循环，一进来就是回到了主菜单
+#     elif keyboard_input == "2":
+#         num = int(input("您想要存多少钱？请输入："))
+#         saving(num)
+#         continue
+#     elif keyboard_input == "3":
+#         num = int(input("您想要取多少钱？请输入："))
+#         get_money(num)
+#         continue
+#     else:
+#         print("程序退出啦")
+#         break       # 通过break退出循环
+
+
+
+
+
+
+
+
+
+
+#数据容器 : list (列表)、tuple (元组)、str (字符串)、set (集合)、dict (字典)
+
+# # 字面量
+# [元素1, 元素2, 元素3, 元素4, ...]
+#
+# # 定义变量
+# 变量名称 = [元素1, 元素2, 元素3, 元素4, ...]
+#
+# # 定义空列表
+# 变量名称 = []
+# 变量名称 = list()
+
+# name_list = ['itheima', 'itcast', 'python']
+# print(name_list)
+# print(type(name_list))
+#
+# my_list = ['itheima', 666, True]
+# print(my_list)
+# print(type(my_list))
+#
+# #list列表可以一次性储存多个不同数据类型的数据，支持嵌套
+# my_list = [[1, 2, 3], [4, 5, 6]]
+# print(my_list)
+# print(type(my_list))
+
+
+
+
+#list列表的功能
+
+
+mylist = ["itcast", "itheima", "python"]
+# 1.1 查找某元素在列表内的下标索引
+index = mylist.index("itheima")
+print(f"itheima在列表中的下标索引值是：{index}")
+
+# 1.2 如果被查找的元素不存在，会报错
+# index = mylist.index("ithe")
+print(f"hello在列表中的下标索引值是：{index}")
+
+
+mylist = ["itcast", "itheima", "python"]
+# 2. 修改特定下标索引的值
+mylist[0] = "传智教育"
+print(f"列表被修改后，结果是：{mylist}")
+
+
+# 3. 在指定下标位置插入新元素
+mylist.insert(1, "best")
+print(f"列表插入元素后，结果是：{mylist}")
+
+
+# 4. 在列表的尾部追加单个新元素
+mylist.append("黑马程序员")
+print(f"列表在追加了元素后，结果是：{mylist}")
+
+
+# 5. 在列表的尾部追加一批新元素
+mylist2 = [1, 2, 3]
+mylist.extend(mylist2)
+print(f"列表在追加了一个新的列表后，结果是：{mylist}")
+
+
+mylist = ["itcast", "itheima", "python"]
+# 6.1 方式1：del 列表[下标]
+del mylist[2]
+print(f"列表删除元素后结果是：{mylist}")
+
+# 6.2 方式2：列表.pop(下标)
+mylist = ["itcast", "itheima", "python"]
+element = mylist.pop(2)
+print(f"通过pop方法取出元素后列表内容：{mylist}，取出的元素是：{element}")
+
+# 7. 删除某元素在列表中的第一个匹配项
+mylist = ["itcast", "itheima", "itcast", "itheima", "python"]
+mylist.remove("itheima")
+print(f"通过remove方法移除元素后，列表的结果是：{mylist}")
+
+# 8. 清空列表
+mylist.clear()
+print(f"列表被清空了，结果是：{mylist}")
+
+# 9. 统计列表内某元素的数量
+mylist = ["itcast", "itheima", "itcast", "itheima", "python"]
+count = mylist.count("itheima")
+print(f"列表中itheima的数量是：{count}")
+
+# 10. 统计列表中全部的元素数量
+mylist = ["itcast", "itheima", "itcast", "itheima", "python"]
+count = len(mylist)
+print(f"列表的元素数量总共有：{count}个")
+
+#67
+
+
+
+
 
 
 
