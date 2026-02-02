@@ -35,15 +35,15 @@
 # num2 = float("11.345")
 # print(type(num2) ,num2)
 #
-# # num3 = int("只因你太美")   错误示范，转换要符合类型
-# # print(type(num3) ,num3)
+# num3 = int("只因你太美")   错误示范，转换要符合类型
+# print(type(num3) ,num3)
 #
 # #算数运算符
 #
 # print("1 + 1 =", 1 + 1)
 # print("2 - 1 =", 2 - 1)
 # print("3 * 3 =", 3 * 3)
-# print("4 / 2 =", 4 / 2)
+# print("5 / 3 =", 5 / 3)
 # print("11 // 2 =", 11 // 2)  #整除运算符
 # print("11 % 2 =", 11 % 2)    #取余运算符
 # print("10 ** 2 =", 10 ** 2)  #指数运算符
@@ -55,12 +55,21 @@
 #
 # # "\"  转义字符\ 能够解除后面符号的效用
 #
-# # 字符串字面量之间的拼接  注：无法和非字符串类型进行拼接
+##print("他说：\"你好\"") 输出：他说："你好"
+
+# \n：换行
 #
+# \t：制表符（Tab键）
+
+# # 字符串字面量之间的拼接  注：无法和非字符串类型进行拼接
+
+
+
 # name000 = "程序员"
 # address = "china"
 # print("i am " + name000 + ", i am in " + address )
-#
+
+
 # # 通过占位的形式，完成拼接
 # name = "程序员"
 #
@@ -76,28 +85,29 @@
 # message = "the number is %s and %s" % (num3 , num4)
 # print(message)
 #
-# #格式化的精度控制
-# # m.n ： m控制宽度，要求时数字（很少使用），设置宽度小于数字自身，不生效
-# #       .n控制小数点精度，要求是数字，会进行小数的四舍五入
-# # #eg： %5d 含义：将整数的输出宽度控制为5位。
-# # 示例：数字 11使用 %5d格式化后，结果为 ␣␣␣11（其中␣代表空格）。即用三个空格在左侧填充，以补足5位的宽度。
-# #
-# # %5.2f 含义：将浮点数的输出宽度控制为5位，并将小数点后的精度设置为2位（小数部分限制2位，会进行四舍五入）。注意：小数点本身和小数部分都计入总宽度。
-# # 示例：数字 11.345使用 %7.2f格式化后，结果为 ␣␣11.35。首先对小数部分四舍五入到两位（.345变为.35），然后计算总宽度为5（1,1,.,3,5），最后在左侧用两个空格填充，以补足7位的总宽度。
-# #
-# # %.2f 含义：不限制输出宽度，只设置小数点后的精度为2位（会进行四舍五入）。
-# # 示例：数字 11.345使用 %.2f格式化后，结果为 11.35。仅对小数部分四舍五入到两位，输出宽度由数字本身决定。
+# 格式化的精度控制
+# m.n ： m控制宽度，要求时数字（很少使用），设置宽度小于数字自身，不生效
+#       .n控制小数点精度，要求是数字，会进行小数的四舍五入
+# #eg： %5d 含义：将整数的输出宽度控制为5位。
+# 示例：数字 11使用 %5d格式化后，结果为 ␣␣␣11（其中␣代表空格）。即用三个空格在左侧填充，以补足5位的宽度。
 #
+# %5.2f 含义：将浮点数的输出宽度控制为5位，并将小数点后的精度设置为2位（小数部分限制2位，会进行四舍五入）。注意：小数点本身和小数部分都计入总宽度。
+# 示例：数字 11.345使用 %7.2f格式化后，结果为 ␣␣11.35。首先对小数部分四舍五入到两位（.345变为.35），然后计算总宽度为5（1,1,.,3,5），最后在左侧用两个空格填充，以补足7位的总宽度。
+#
+# %.2f 含义：不限制输出宽度，只设置小数点后的精度为2位（会进行四舍五入）。
+# 示例：数字 11.345使用 %.2f格式化后，结果为 11.35。仅对小数部分四舍五入到两位，输出宽度由数字本身决定。
+
 # num1 = 11
 # num2 = 11.345
 # print("数字11宽度限制5，结果是：%5d" % num1)
 # print("数字11宽度限制1，结果是：%1d" % num1)
 # print("数字11.345宽度限制7，小数精度2，结果是：%7.2f" % num2)
 # print("数字11.345不限制，小数精度2，结果是：%.2f" % num2)
-#
-#
+
+
+#--------------------------------------1.28------------------------
 # #字符串格式化-快速写法
-# #语法：f“内容{变量}”的格式来快熟格式化
+# #语法：f“内容{变量}”的格式来快速格式化
 #
 # name03 = "test"
 # year = 2025
@@ -112,6 +122,7 @@
 # print("you name is:%s" % name04)
 # name05 = input("tell me who you are:")
 # print("you name is:%s" % name05)#input输入默认都是字符串，如果需要转换浮点数等需要自行转换
+# print("you name is:%s %s " % (name05,name04)) #两个%s的情况
 # price01 = input("tell me the number is: ")
 # print("价格的数据类型是:",type(price01))
 # print("价格现在的数据类型是:",type(int(price01)))
@@ -127,6 +138,11 @@
 # num2 = 10
 # print(f"10==10的结果是{num1 == num2}")
 # print(f"10!=10的结果是{num1 != num2}")
+
+# 不需要考虑变量在不在末尾，直接填进去，最不容易出错
+# print(f"商品是：{name}，价格是：{price:.2f} 元")
+
+
 # name1 = "y"
 # name2 = "b"
 # print(f"y>=b的结果是{name1 >= name2}")
@@ -191,6 +207,7 @@
 #             print("你猜的小了")
 # print(f"你总共猜了{count}次")
 #41
+
 
 #
 #
@@ -261,7 +278,7 @@
 # 演示特殊字面量：None
 # """
 #
-# # 无return语句的函数返回值
+# 无return语句的函数返回值
 # def say_hi():
 #     print("你好呀")
 #
@@ -429,71 +446,250 @@
 
 
 
-#list列表的功能
-
-
-mylist = ["itcast", "itheima", "python"]
-# 1.1 查找某元素在列表内的下标索引
-index = mylist.index("itheima")
-print(f"itheima在列表中的下标索引值是：{index}")
-
-# 1.2 如果被查找的元素不存在，会报错
-# index = mylist.index("ithe")
-print(f"hello在列表中的下标索引值是：{index}")
-
-
-mylist = ["itcast", "itheima", "python"]
-# 2. 修改特定下标索引的值
-mylist[0] = "传智教育"
-print(f"列表被修改后，结果是：{mylist}")
-
-
+# #list列表的功能
+#
+#
+# mylist = ["itcast", "itheima", "python"]
+# # 1.1 查找某元素在列表内的下标索引
+# index = mylist.index("itheima")
+# print(f"itheima在列表中的下标索引值是：{index}")
+#
+# # 1.2 如果被查找的元素不存在，会报错
+# # index = mylist.index("ithe")
+# print(f"hello在列表中的下标索引值是：{index}")
+#
+#
+# mylist = ["itcast", "itheima", "python"]
+# # 2. 修改特定下标索引的值
+# mylist[0] = "传智教育"
+# print(f"列表被修改后，结果是：{mylist}")
+#
+#
 # 3. 在指定下标位置插入新元素
-mylist.insert(1, "best")
-print(f"列表插入元素后，结果是：{mylist}")
+# mylist.insert(1, "best")
+# print(f"列表插入元素后，结果是：{mylist}")
+#
+#
+# # 4. 在列表的尾部追加单个新元素
+# mylist.append("黑马程序员")
+# print(f"列表在追加了元素后，结果是：{mylist}")
+#
+#
+# # 5. 在列表的尾部追加一批新元素
+# mylist2 = [1, 2, 3]
+# mylist.extend(mylist2)
+# print(f"列表在追加了一个新的列表后，结果是：{mylist}")
+#
+#
+# mylist = ["itcast", "itheima", "python"]
+# # 6.1 方式1：del 列表[下标]
+# del mylist[2]
+# print(f"列表删除元素后结果是：{mylist}")
+#
+# # 6.2 方式2：列表.pop(下标)
+# mylist = ["itcast", "itheima", "python"]
+# element = mylist.pop(2)
+# print(f"通过pop方法取出元素后列表内容：{mylist}，取出的元素是：{element}")
+#
+# # 7. 删除某元素在列表中的第一个匹配项
+# mylist = ["itcast", "itheima", "itcast", "itheima", "python"]
+# mylist.remove("itheima")
+# print(f"通过remove方法移除元素后，列表的结果是：{mylist}")
+#
+# # 8. 清空列表
+# mylist.clear()
+# print(f"列表被清空了，结果是：{mylist}")
+#
+# # 9. 统计列表内某元素的数量
+# mylist = ["itcast", "itheima", "itcast", "itheima", "python"]
+# count = mylist.count("itheima")
+# print(f"列表中itheima的数量是：{count}")
+#
+# # 10. 统计列表中全部的元素数量
+# mylist = ["itcast", "itheima", "itcast", "itheima", "python"]
+# count = len(mylist)
+# print(f"列表的元素数量总共有：{count}个")
+#
+# #67
+# """
+# 演示对list列表的循环，使用while和for循环2种方式
+# """
+#
+# def list_while_func():
+#     """
+#     使用while循环遍历列表的演示函数
+#     :return: None
+#     """
+#     my_list = ["传智教育", "黑马程序员", "Python"]
+#     # 初始化索引
+#     index = 0
+#     while index < len(my_list):
+#         print(my_list[index])
+#         index += 1
+#
+# def list_for_func():
+#     """
+#     使用for循环遍历列表的演示函数
+#     :return: None
+#     """
+#     my_list = ["传智教育", "黑马程序员", "Python"]
+#     for element in my_list:
+#         print(element)
+#
+# # 调用两个函数来演示
+# if __name__ == "__main__":
+#     print("使用while循环遍历列表：")
+#     list_while_func()
+#     print("\n使用for循环遍历列表：")
+#     list_for_func()
 
 
-# 4. 在列表的尾部追加单个新元素
-mylist.append("黑马程序员")
-print(f"列表在追加了元素后，结果是：{mylist}")
+
+#元组
+
+# 元组是 Python 中有序、不可变的序列数据类型，用圆括号 ()
+# 包裹元素，元素之间用逗号分隔。“不可变” 意味着元组创建后，无法修改、添加或删除其中的元素
+
+# # 定义元组
+# t1 = (1, "Hello", True)
+# t2 = ()
+# t3 = tuple()
+#
+# print(f"t1的类型是：{type(t1)}，内容是：{t1}")
+# print(f"t2的类型是：{type(t2)}，内容是：{t2}")
+# print(f"t3的类型是：{type(t3)}，内容是：{t3}")
+#
+# # 定义单个元素的元组
+# t4 = ("hello",)#定义单个元素的元组时，必须在元素后面加逗号
+# print(f"t4的类型是：{type(t4)}，t4的内容是：{t4}")
+#
+# # 元组的嵌套
+# t5 = ((1, 2, 3), (4, 5, 6))
+# print(f"t5的类型是：{type(t5)}，内容是：{t5}")
+#
+# # 下标索引去取出内容
+# num = t5[1][2]
+# print(f"从嵌套元组中取出的数据是：{num}")
+#
+# # 元组的操作：index查找方法
+# t6 = ("传智教育", "黑马程序员", "Python")
+# index = t6.index("黑马程序员")
+# print(f"在元组t6中查找黑马程序员，的下标是：{index}")
+#
+# # 元组的操作：count统计方法
+# t7 = ("传智教育", "黑马程序员", "黑马程序员", "黑马程序员", "Python")
+# num = t7.count("黑马程序员")
+# print(f"在元组t7中统计黑马程序员的数量有：{num}个")
+#
+# # 元组的操作：len函数统计元组元素数量
+# t8 = ("传智教育", "黑马程序员", "黑马程序员", "黑马程序员", "Python")
+# num = len(t8)
+# print(f"t8元组中的元素有：{num}个")
+#
+# # 元组的遍历：while
+# index = 0
+# while index < len(t8):
+#     print(f"元组的元素有：{t8[index]}")
+#     index += 1
+#
+# # 元组的遍历：for
+# for element in t8:
+#     print(f"元组的元素有：{element}")
 
 
-# 5. 在列表的尾部追加一批新元素
-mylist2 = [1, 2, 3]
-mylist.extend(mylist2)
-print(f"列表在追加了一个新的列表后，结果是：{mylist}")
+
+#字符串
+
+"""
+只可以存储字符串
+长度任意（取决于内存大小）
+支持下标索引
+允许重复字符串存在
+不可以修改（增加或删除元素等）
+支持 for 循环
+"""
+
+my_str = "itheima and itcast"
+
+# # 通过下标索引取值
+# value = my_str[2]
+# value2 = my_str[-16]
+# print(f"从字符串{my_str}取下标为2的元素，值是：{value}, 取下标为-16的元素。值是：{value2}")
+#
+# # my_str[2] = "H"  # ❌ 字符串是不可变类型，直接修改会报错
+#
+# # index方法：查找子串的起始下标
+# value = my_str.index("and")
+# print(f"在字符串{my_str}中查找and，其起始下标是：{value}")
+#
+# # replace方法
+# new_my_str = my_str.replace("it", "程序")
+# print(f"将字符串{my_str}，进行替换后得到：{new_my_str}")
+#
+# # ❷ 只替换第一个"it"：指定count=1
+# replace_first = my_str.replace("it", "程序", 1)
+# print(f"只替换第一个'it'的结果：{replace_first}")
+#
+#
+#
+# # split方法
+# my_str = "hello python itheima itcast"
+# my_str_list = my_str.split(" ")
+# print(f"将字符串{my_str}进行split切分后得到：{my_str_list}，类型是：{type(my_str_list)}")
+#
+# # strip方法
+# my_str = "  itheima and itcast  "
+# new_my_str = my_str.strip()  # 不传入参数，去除首尾空格
+# print(f"字符串{my_str}被strip后，结果：{new_my_str}")
+#
+# my_str = "12itheima and itcast21"
+# new_my_str = my_str.strip("12")
+# print(f"字符串{my_str}被strip('12')后，结果：{new_my_str}")
+#
+# # 统计字符串中某字符串的出现次数，count
+# my_str = "itheima and itcast"
+# count = my_str.count("it")
+# print(f"字符串{my_str}中it出现的次数是：{count}")
+#
+# # 统计字符串的长度，len()
+# num = len(my_str)
+# print(f"字符串{my_str}的长度是：{num}")
 
 
-mylist = ["itcast", "itheima", "python"]
-# 6.1 方式1：del 列表[下标]
-del mylist[2]
-print(f"列表删除元素后结果是：{mylist}")
+#练习
+# a = "itheima itcast boxuegu"
+# count = a.count("it")
+# print(count)
+# ax = a.replace(" ","|")
+# print(ax)
+# ab = ax.split("|")
+# print(ab)
 
-# 6.2 方式2：列表.pop(下标)
-mylist = ["itcast", "itheima", "python"]
-element = mylist.pop(2)
-print(f"通过pop方法取出元素后列表内容：{mylist}，取出的元素是：{element}")
+#70
 
-# 7. 删除某元素在列表中的第一个匹配项
-mylist = ["itcast", "itheima", "itcast", "itheima", "python"]
-mylist.remove("itheima")
-print(f"通过remove方法移除元素后，列表的结果是：{mylist}")
 
-# 8. 清空列表
-mylist.clear()
-print(f"列表被清空了，结果是：{mylist}")
 
-# 9. 统计列表内某元素的数量
-mylist = ["itcast", "itheima", "itcast", "itheima", "python"]
-count = mylist.count("itheima")
-print(f"列表中itheima的数量是：{count}")
 
-# 10. 统计列表中全部的元素数量
-mylist = ["itcast", "itheima", "itcast", "itheima", "python"]
-count = len(mylist)
-print(f"列表的元素数量总共有：{count}个")
 
-#67
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
